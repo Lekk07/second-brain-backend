@@ -17,7 +17,7 @@ def create_app(config_name: str = None) -> Flask:
 
     db.init_app(app)
     jwt.init_app(app)
-    CORS(app, resources={r"/api/*": {"origins": app.config["CORS_ORIGINS"]}})
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     from routes.auth   import auth_bp
     from routes.notes  import notes_bp
