@@ -38,7 +38,7 @@ class TestingConfig(BaseConfig):
 class ProductionConfig(BaseConfig):
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")  # PostgreSQL in prod
-    CORS_ORIGINS = os.getenv("CORS_ORIGINS", "https://yourdomain.com").split(",")
+    CORS_ORIGINS = os.getenv("CORS_ORIGINS", "https://second-brain-frontend-drab.vercel.app").split(",")
 
 
 # Maps the FLASK_ENV value to a config class
